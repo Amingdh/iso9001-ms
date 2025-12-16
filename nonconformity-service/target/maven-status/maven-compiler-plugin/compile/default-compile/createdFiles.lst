@@ -1,0 +1,6 @@
+org\iso9001\nonconformity\model\NonConformity.class
+org\iso9001\nonconformity\repository\NonConformityRepository.class
+org\iso9001\nonconformity\config\SecurityConfig.class
+org\iso9001\nonconformity\NonconformityServiceApplication.class
+org\iso9001\nonconformity\web\NonConformityController.class
+org\iso9001\nonconformity\service\NonConformityService.class

@@ -1,0 +1,42 @@
+{
+  "realm": "iso9001-realm",
+  "enabled": true,
+  "clients": [
+    {
+      "clientId": "gateway",
+      "secret": "gateway-secret",
+      "protocol": "openid-connect",
+      "publicClient": false,
+      "redirectUris": ["*"],
+      "serviceAccountsEnabled": true,
+      "standardFlowEnabled": false,
+      "directAccessGrantsEnabled": true
+    },
+    {
+      "clientId": "frontend",
+      "protocol": "openid-connect",
+      "publicClient": true,
+      "redirectUris": ["*"],
+      "webOrigins": ["*"],
+      "standardFlowEnabled": true
+    }
+  ],
+  "roles": {
+    "realm": [
+      { "name": "ADMIN" },
+      { "name": "AUDITOR" }
+    ]
+  },
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        { "type": "password", "value": "admin", "temporary": false }
+      ],
+      "realmRoles": ["ADMIN"]
+    }
+  ]
+}
+

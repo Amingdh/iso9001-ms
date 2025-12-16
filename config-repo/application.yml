@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      override-system-properties: false
+---
+spring:
+  config:
+    activate:
+      on-profile: docker
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka/
+

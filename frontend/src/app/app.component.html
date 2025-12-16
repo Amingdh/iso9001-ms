@@ -1,0 +1,23 @@
+<div class="page stack">
+  <div class="row" style="align-items: center; justify-content: space-between;">
+    <div>
+      <h2>{{ title }}</h2>
+      <p *ngIf="auth.authenticated">Logged in as: {{ auth.username || 'user' }}</p>
+      <p *ngIf="!auth.authenticated">Not authenticated</p>
+    </div>
+    <div class="row">
+      <button *ngIf="!auth.authenticated" (click)="login()">Login</button>
+      <button *ngIf="auth.authenticated" class="secondary" (click)="logout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card" style="flex: 2 1 60%;">
+      <app-nonconformities></app-nonconformities>
+    </div>
+    <div class="card" style="flex: 1 1 38%;">
+      <app-actions></app-actions>
+    </div>
+  </div>
+</div>
+

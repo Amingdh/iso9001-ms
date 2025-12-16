@@ -1,0 +1,13 @@
+{
+  "/non-conformities": {
+    "target": "http://localhost:8082",
+    "secure": false,
+    "changeOrigin": true
+  },
+  "/actions": {
+    "target": "http://localhost:8082",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
+

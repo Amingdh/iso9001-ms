@@ -1,0 +1,35 @@
+server:
+  port: ${PORT:8081}
+
+spring:
+  application:
+    name: nonconformity-service
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/nonconformity_db}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: false
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8085/realms/iso9001-realm
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+  <body>
+    <script>
+      // Required by Keycloak JS to complete silent SSO/login checks
+      parent.postMessage(location.href, location.origin);
+    </script>
+  </body>
+</html>
+
